@@ -28,7 +28,7 @@ void Engine::SetupGame() {
   rooks_.clear();
   rooks_.reserve(rooks_count_);
   board_ = std::make_shared<ChessBoard>();
-  for (int i = 0; i < rooks_count_; ++i) {
+  for (size_t i = 0; i < rooks_count_; ++i) {
     auto random_position = GenerateRandomBoardPosition();
     while (board_->IsOccupied(random_position)) {
       random_position = GenerateRandomBoardPosition();
